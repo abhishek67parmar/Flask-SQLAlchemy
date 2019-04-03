@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_restful import Api,Resource,reqparse
 from flask_jwt import JWT, jwt_required
@@ -10,7 +11,7 @@ from resources.store import Store,StoreList
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:Abhi67shek@localhost/Store'
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','postgresql://postgres:Abhi67shek@localhost/Store')
 app.secret_key='cool'
 api = Api(app)
 
