@@ -14,9 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:Abhi67shek@localhos
 app.secret_key='cool'
 api = Api(app)
 
-@app.before_first_request
-def create_table():
-    db.create_all()
+
 
 
 jwt = JWT(app,authenticate,identity) #create new endpoint /auth
