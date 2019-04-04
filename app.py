@@ -6,7 +6,7 @@ from security import authenticate,identity
 from resources.item import Item,ItemList
 from resources.user import UserRegistration
 from resources.store import Store,StoreList
-
+from resources.home import Home
 
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
@@ -25,6 +25,7 @@ api.add_resource(Item,'/item/<string:name>') #http://127.0.0.1:5000/item/abhi
 api.add_resource(ItemList,'/items') #http://127.0.0.1:5000/items
 api.add_resource(UserRegistration,'/logon')
 api.add_resource(StoreList, '/stores')
+api.add_resource(Home,'/')
 
 #
 # @app.before_first_request
