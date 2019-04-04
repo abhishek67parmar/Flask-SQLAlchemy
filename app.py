@@ -11,7 +11,7 @@ from resources.store import Store,StoreList
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
-app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','postgresql://postgres:Abhi67shek@localhost/Store')
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','postgresql://postgres:aaa@localhost/Store')
 app.secret_key='cool'
 api = Api(app)
 
@@ -25,6 +25,11 @@ api.add_resource(Item,'/item/<string:name>') #http://127.0.0.1:5000/item/abhi
 api.add_resource(ItemList,'/items') #http://127.0.0.1:5000/items
 api.add_resource(UserRegistration,'/logon')
 api.add_resource(StoreList, '/stores')
+
+#
+# @app.before_first_request
+# def create_table():
+#     db.create_all()
 
 # @app.route('/')
 # def hello():

@@ -20,7 +20,7 @@ class UserRegistration(Resource):
         if testuser:
             return {"message": "Already exists"}
 
-        user = UserModel(**data)
+        user = UserModel(data['username'],UserModel.generate_hash(data['password']))
         user.save_to_db()
 
 
