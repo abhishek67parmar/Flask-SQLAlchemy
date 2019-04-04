@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Api,Resource,reqparse
 from flask_jwt import JWT, jwt_required
 from security import authenticate,identity
@@ -25,16 +25,18 @@ api.add_resource(Item,'/item/<string:name>') #http://127.0.0.1:5000/item/abhi
 api.add_resource(ItemList,'/items') #http://127.0.0.1:5000/items
 api.add_resource(UserRegistration,'/logon')
 api.add_resource(StoreList, '/stores')
-api.add_resource(Home,'/')
+# api.add_resource(Home,'/')
 
 #
 # @app.before_first_request
 # def create_table():
 #     db.create_all()
 
-# @app.route('/')
-# def hello():
-#     return "hello world"
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+    
 if __name__ == "__main__":
     from db import db
     db.init_app(app)
