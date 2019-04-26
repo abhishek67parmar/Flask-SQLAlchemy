@@ -1,21 +1,13 @@
 # Restful store Api
 
 ## Required libraries
-<<<<<<< HEAD
 - Flask
 - Flask-Restful (for Restful Api)
 - Flask-JWT (for authorization purpose)
 - Flask-SQLAlchemy (To work with database using ORM)
 - passlib (To make password more secure)
-=======
-Flask
-Flask-Restful (for Restful Api)
-Flask-JWT (for authorization purpose)
-Flask-SQLAlchemy (To work with database using ORM)
-passlib (To make password more secure)
->>>>>>> 60274b9a309e51b3e9914e4f1104a56693d1d521
 
-# Api Endpoints
+## Api Endpoints
 
 #### 1. /logon (Post)
   - for user User Registration
