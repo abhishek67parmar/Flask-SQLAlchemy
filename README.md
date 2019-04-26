@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 # Restful store Api
-=======
-# Login - Logout Api
->>>>>>> 7749412280a79bf8d17963d8feb810442b68fcbb
-This api is made in flask (Python web framework).
 
 ## Required libraries
-Flask
-<<<<<<< HEAD
-Flask-Restful (for Restful Api)S
-=======
-Flask-Restful (for Restful Api)
->>>>>>> 7749412280a79bf8d17963d8feb810442b68fcbb
-Flask-JWT (for authorization purpose)
-Flask-SQLAlchemy (To work with database using ORM)
-passlib (To make password more secure)
+- Flask
+- Flask-Restful (for Restful Api)
+- Flask-JWT (for authorization purpose)
+- Flask-SQLAlchemy (To work with database using ORM)
+- passlib (To make password more secure)
 
 # Api Endpoints
 
